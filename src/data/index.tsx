@@ -108,3 +108,9 @@ export const data = [
         image: "assets/244104299904.webp"
     },
 ]
+
+export const sizes = ['8', '9', '10', '11', '12', '13'];
+
+export const brandsData = ['Nike', 'Jordan', 'Under Armour', 'Asics', 'adidas', 'New Balance'];
+
+export const colors = ['white', 'purple', 'black', 'red', 'green', 'blue'];

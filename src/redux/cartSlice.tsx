@@ -8,8 +8,14 @@ export const cartSlice = createSlice({
         addToCart: (state, action) => { 
             state.push(action.payload as Sneaker);
         }, 
-        removeFromCart: state => { 
-            // state.cart -= 1 
+        removeFromCart: (state, action) => { 
+            state.map(item => {
+                if (item.id === action.payload) {
+                    return state.splice(state.indexOf(item), 1);
+                } else {
+                    return item;
+                }
+            })
         } 
     } 
 });

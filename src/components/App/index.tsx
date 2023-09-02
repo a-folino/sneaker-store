@@ -5,13 +5,15 @@ import { Cart } from '../Cart';
 import { FilterSelection } from '../FilterSelection';
 
 export const App = (): JSX.Element => {
-  const [filterBy, setFilterBy] = useState('');
-  const [size, setSize] = useState('');
+  const [sizes, setSizes] = useState<string[]>([]);
+  const [brands, setBrands] = useState<string[]>([]);
 
+  console.log('BRANDS', brands);
+  console.log('SIZES', sizes);
   return (
     <div className="container">
-        <FilterSelection setFilterBy={setFilterBy} setSize={setSize} />
-        <Sneakers filterBy={filterBy} size={size} />
+        <FilterSelection setSizes={setSizes} setBrands={setBrands} brands={brands} />
+        <Sneakers sizes={sizes} brands={brands} />
         <Cart />
       </div>
   );

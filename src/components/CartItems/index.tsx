@@ -1,12 +1,19 @@
 import './styles.scss';
 import { Sneaker } from "../../types";
 import { BiTrash } from 'react-icons/bi';
+import { removeFromCart } from '../../redux/cartSlice';
+import { useDispatch } from 'react-redux';
 
 type Props = {
     cart: Sneaker[]
 }
 
 export const CartItems = ({ cart }: Props) => {
+    const dispatch = useDispatch();
+
+    const handleDelete = (item: number) => {
+        dispatch(removeFromCart(item));
+    }
 
     return (
         <>
@@ -15,7 +22,7 @@ export const CartItems = ({ cart }: Props) => {
                     <div className="details">
                         <p>{item.shoe}</p>
                         <p>${item.price.toFixed(2)}</p>
-                        <BiTrash style={{ cursor: 'pointer'}} />
+                        <BiTrash onClick={() => handleDelete(item.id)} style={{ cursor: 'pointer'}} />
                     </div>
                 </div>
             ))}

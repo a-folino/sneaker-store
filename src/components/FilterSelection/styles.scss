@@ -1,11 +1,38 @@
 .filter-container {
     padding: 0 20px;
-
+    width: 100%;
+    
     .filters {
         border: 1px solid #ccc;
-
+        
         .filter {
+            padding: 10px;
+            padding-bottom: 0;
             border-bottom: 1px solid #ccc;
+
+            .top {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 10px;
+                user-select: none;
+                margin-bottom: 10px;
+            }
+
+            .filterType {
+                display: none;
+            }
+
+            .openFilter {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 5px;
+                margin-bottom: 10px;
+
+                label {
+                    margin-left: 5px;
+                }
+            }
         }
     }
 }
