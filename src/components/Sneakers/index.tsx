@@ -6,10 +6,18 @@ import { addToCart } from '../../redux/cartSlice';
 import { RootState } from '../../redux/store';
 import { Sneaker } from '../../types';
 
-export const Sneakers = (): JSX.Element => {
+type Props = {
+    filterBy: string;
+    size: string | undefined;
+}
+
+export const Sneakers = ({ filterBy, size }: Props): JSX.Element => {
     const dispatch = useDispatch();
     const cart = useSelector((state: RootState) => state.cart);
 
+    const sizeFiltered = data.filter((item) => item.sizes.includes(size as string));
+    
+    console.log('FILTERED', sizeFiltered);
     console.log(cart);
 
     const handleClick = (sneaker: Sneaker) => {

@@ -1,17 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit';
-
-type CartState = {
-    shoe: string;
-    price: number;
-    id: number;
-};
+import { Sneaker } from '../types';
 
 export const cartSlice = createSlice({ 
     name: 'addToCart', 
-    initialState: [] as CartState[],
+    initialState: [] as Sneaker[],
     reducers: { 
         addToCart: (state, action) => { 
-            state.push(action.payload as CartState);
+            state.push(action.payload as Sneaker);
         }, 
         removeFromCart: state => { 
             // state.cart -= 1 
