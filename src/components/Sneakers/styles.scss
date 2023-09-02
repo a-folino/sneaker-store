@@ -1,0 +1,23 @@
+.sneakers-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    .sneaker {
+        border: 1px solid #ccc;
+
+        img {
+            border-bottom: 1px solid #ccc;
+            background-color: #eaeaea;
+            width: 240px;
+        }
+
+        .details {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            padding: 10px 0 10px 10px;
+        }
+    }
+}

@@ -1,0 +1,11 @@
+.filter-container {
+    padding: 0 20px;
+
+    .filters {
+        border: 1px solid #ccc;
+
+        .filter {
+            border-bottom: 1px solid #ccc;
+        }
+    }
+}
