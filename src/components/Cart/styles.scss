@@ -1,9 +1,37 @@
 .cart-container {
-    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #333;
+
+    .cart {
+        padding: 10px;
+    }
+
+    .bottom {
+        .checkout {
+            &-btn {
+                border-top: 1px solid #333;
+                padding: 10px;
+                text-align: center;
+                background-color: #eee;
+                color: #aaa;
+    
+                &-active {
+                    color: white;
+                    background-color: black;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .total {
+            position: relative; 
+            bottom: 0;
+            padding: 10px;
+        }
+    }
+
+    
 }
 
-.cart {
-    border: 1px solid #333;
-    padding: 10px;
-    height: 100%;
-}

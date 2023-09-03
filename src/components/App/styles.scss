@@ -9,10 +9,18 @@
 body {
     display: flex;
     font-family: 'Roboto', sans-serif;
+
+    ::selection {
+        background: black;
+        color: rgb(190, 11, 11);
+    }
 }
 
 .container {
     display: grid;
     padding: 80px 100px;
     grid-template-columns: 1fr 4fr 1.5fr;
+    gap: 50px;
+    height: 100vh;
+    overflow: hidden;
 }

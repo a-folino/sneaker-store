@@ -13,6 +13,15 @@ export const Cart = (): JSX.Element => {
                     <CartItems cart={cart} />
                 }
             </div>
+            <div className="bottom">
+                <div className="total">
+                    <p>TOTAL</p>
+                    <p>${cart.reduce((acc, curr) => acc + curr.price, 0).toFixed(2)}</p>
+                </div>
+                <div className={cart.length ? "checkout-btn-active checkout-btn" : "checkout-btn"}>
+                    <p>CHECKOUT</p>
+                </div>
+            </div>
         </div>
     )
 }

@@ -1,0 +1,21 @@
+.cart-item {
+    .details {
+        .shoe {
+            display: flex;
+            justify-content: space-between;
+            font-size: .95rem;
+
+            svg {
+                min-height: 14px;
+                min-width: 14px;
+            }
+        }
+
+        .price {
+            color: #555;
+            font-size: .8rem;
+            margin-top: 3px;
+            margin-bottom: 10px;
+        }
+    }
+}

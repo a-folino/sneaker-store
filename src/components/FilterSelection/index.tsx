@@ -14,15 +14,20 @@ export const FilterSelection = ({ setSizes, setBrands, brands }: Props): JSX.Ele
     const brandRef = useRef<HTMLDivElement>(null);
     const colorRef = useRef<HTMLDivElement>(null);
 
-    const handleClick = (filter: string) => {
+    const handleClick = (e: React.MouseEvent, filter: string) => {
+        const target = e.target as HTMLDivElement;
+
         if (filter === 'size') {
             const ref = sizeRef.current as HTMLDivElement;
+            target.classList.contains('openIcon') ? target.classList.remove('openIcon') : target.classList.add('openIcon');
             ref.classList.contains('openFilter') ? ref.classList.remove('openFilter') : ref.classList.add('openFilter');
         } else if (filter === 'brand') {
             const ref = brandRef.current as HTMLDivElement;
+            target.classList.contains('openIcon') ? target.classList.remove('openIcon') : target.classList.add('openIcon');
             ref.classList.contains('openFilter') ? ref.classList.remove('openFilter') : ref.classList.add('openFilter');
         } else if (filter === 'color') {
             const ref = colorRef.current as HTMLDivElement;
+            target.classList.contains('openIcon') ? target.classList.remove('openIcon') : target.classList.add('openIcon');
             ref.classList.contains('openFilter') ? ref.classList.remove('openFilter') : ref.classList.add('openFilter');
         }
     };
@@ -38,7 +43,7 @@ export const FilterSelection = ({ setSizes, setBrands, brands }: Props): JSX.Ele
         <div className="filter-container">
             <div className="filters">
                 <div className="filter">
-                    <div className="top" onClick={() => handleClick('size')}>
+                    <div className="top" onClick={(e) => handleClick(e, 'size')}>
                         <p>SIZE</p>
                         <AiOutlinePlus />
                     </div>
@@ -52,7 +57,7 @@ export const FilterSelection = ({ setSizes, setBrands, brands }: Props): JSX.Ele
                     </div>
                 </div>
                 <div className="filter">
-                    <div className="top" onClick={() => handleClick('brand')}>
+                    <div className="top" onClick={(e) => handleClick(e, 'brand')}>
                         <p>BRAND</p>
                         <AiOutlinePlus />
                     </div>
@@ -66,7 +71,7 @@ export const FilterSelection = ({ setSizes, setBrands, brands }: Props): JSX.Ele
                     </div>
                 </div>
                 <div className="filter" style={{ borderBottom: 'none' }}> 
-                    <div className="top" onClick={() => handleClick('color')}>
+                    <div className="top" onClick={(e) => handleClick(e, 'color')}>
                         <p>COLOR</p>
                         <AiOutlinePlus />
                     </div>

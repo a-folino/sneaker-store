@@ -20,9 +20,9 @@ export const CartItems = ({ cart }: Props) => {
             {cart.map((item) => (
                 <div className="cart-item" key={item.id + Math.floor(Math.random() * 1000)}>
                     <div className="details">
-                        <p>{item.shoe}</p>
-                        <p>${item.price.toFixed(2)}</p>
-                        <BiTrash onClick={() => handleDelete(item.id)} style={{ cursor: 'pointer'}} />
+                        <p className="shoe">{item.shoe} <BiTrash onClick={() => handleDelete(item.id)} style={{ cursor: 'pointer'}} /></p>
+                        <p className="price">${item.price.toFixed(2)}</p>
+                        
                     </div>
                 </div>
             ))}
