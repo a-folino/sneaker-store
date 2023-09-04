@@ -38,8 +38,8 @@
 
 @media screen and (max-width: 850px) {
     .cart-container {
-        height: 300px;
-        margin: 0;
+        max-height: 100%;
+        margin: 40px 0;
 
         .cart {
             padding: 10px;

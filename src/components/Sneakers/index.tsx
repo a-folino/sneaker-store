@@ -57,7 +57,7 @@ export const Sneakers = ({ sizes, brands, colors }: Props): JSX.Element => {
                 </div>
             )
         } else if (!isOpen) {
-            return <>No results found.</>
+            return <p className="no-results">No results found.</p>
         } else {
             return <Modal isOpen={isOpen} setIsOpen={setIsOpen} sneaker={sneaker} />
         }
