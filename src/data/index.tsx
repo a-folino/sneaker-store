@@ -2,7 +2,7 @@ export const data = [
     {
         shoe: "Nike Air Force 1 '07",
         id: 1,
-        sizes: ['8', '9', '10', '11', '12', '13'],
+        sizes: ['9', '10', '11', '12', '13'],
         brand: "Nike",
         color: "white",
         price: 200.00,
@@ -107,10 +107,46 @@ export const data = [
         price: 220.00,
         image: "assets/244104299904.webp"
     },
+    {
+        shoe: "New Balance 480",
+        id: 13,
+        sizes: ['8', '9', '11', '13'],
+        brand: "New Balance",
+        color: "blue",
+        price: 160.00,
+        image: "assets/244104376504.webp"
+    },
+    {
+        shoe: "Nike Tuned 1",
+        id: 14,
+        sizes: ['8', '9', '10', '11', '12', '13'],
+        brand: "Nike",
+        color: "black",
+        price: 250.00,
+        image: "assets/244208608604.webp"
+    },
+    {
+        shoe: "Nike React Infinity Run Flyknit 4",
+        id: 15,
+        sizes: ['8', '9', '13'],
+        brand: "Nike",
+        color: "black",
+        price: 240.00,
+        image: "assets/244208667204.webp"
+    },
+    {
+        shoe: "adidas Gazelle",
+        id: 16,
+        sizes: ['10', '11', '12',],
+        brand: "adidas",
+        color: "red",
+        price: 170.00,
+        image: "assets/244310454004.webp"
+    },
 ]
 
-export const sizes = ['8', '9', '10', '11', '12', '13'];
+export const sizesData = ['8', '9', '10', '11', '12', '13'];
 
 export const brandsData = ['Nike', 'Jordan', 'Under Armour', 'Asics', 'adidas', 'New Balance'];
 
-export const colors = ['white', 'purple', 'black', 'red', 'green', 'blue'];
+export const colorsData = ['white', 'purple', 'black', 'red', 'green', 'blue'];

@@ -1,5 +1,6 @@
 .filter-container {
-    width: 100%;
+    margin-left: 80px;
+    margin-top: 80px;
     
     .filters {
         border: 1px solid #ccc;
@@ -34,4 +35,14 @@
             }
         }
     }
+}
+
+@media screen and (max-width: 850px) {
+    .filter-container {
+        padding-top: 40px;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
 }

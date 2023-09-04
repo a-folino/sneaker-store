@@ -3,6 +3,8 @@
     flex-direction: column;
     justify-content: space-between;
     border: 1px solid #333;
+    margin: 80px;
+    margin-left: 0;
 
     .cart {
         padding: 10px;
@@ -29,9 +31,31 @@
             position: relative; 
             bottom: 0;
             padding: 10px;
+            border-top: 1px solid #333;;
         }
     }
-
-    
 }
 
+@media screen and (max-width: 850px) {
+    .cart-container {
+        height: 300px;
+        margin: 0;
+
+        .cart {
+            padding: 10px;
+            overflow-y: scroll;
+            scrollbar-width: none;
+    
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .cart-container {
+        margin-bottom: 40px;
+        font-size: .9rem;
+    }
+}

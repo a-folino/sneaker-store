@@ -7,13 +7,12 @@ import { FilterSelection } from '../FilterSelection';
 export const App = (): JSX.Element => {
   const [sizes, setSizes] = useState<string[]>([]);
   const [brands, setBrands] = useState<string[]>([]);
+  const [colors, setColors] = useState<string[]>([]);
 
-  console.log('BRANDS', brands);
-  console.log('SIZES', sizes);
   return (
     <div className="container">
-        <FilterSelection setSizes={setSizes} setBrands={setBrands} brands={brands} />
-        <Sneakers sizes={sizes} brands={brands} />
+        <FilterSelection sizes={sizes} setSizes={setSizes} setBrands={setBrands} brands={brands} setColors={setColors} colors={colors} />
+        <Sneakers sizes={sizes} brands={brands} colors={colors} />
         <Cart />
       </div>
   );

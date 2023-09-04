@@ -8,9 +8,10 @@ import { Sneaker } from '../../types';
 type Props = {
     sizes: string[];
     brands: string[];
+    colors: string[];
 }
 
-export const Sneakers = ({ sizes, brands }: Props): JSX.Element => {
+export const Sneakers = ({ sizes, brands, colors }: Props): JSX.Element => {
     const dispatch = useDispatch();
 
     const handleClick = (sneaker: Sneaker) => {
@@ -19,9 +20,29 @@ export const Sneakers = ({ sizes, brands }: Props): JSX.Element => {
         // add to localStorage
     };
 
+    const filteredData = data.filter(sneaker => {
+        if (sizes.length && brands.length && colors.length) {
+            return sneaker.sizes.some(size => sizes.includes(size)) && brands.includes(sneaker.brand) && colors.includes(sneaker.color);
+        } else if (sizes.length && brands.length) {
+            return sneaker.sizes.some(size => sizes.includes(size)) && brands.includes(sneaker.brand)
+        } else if (sizes.length && colors.length) {
+            return sneaker.sizes.some(size => sizes.includes(size)) && colors.includes(sneaker.color);
+        } else if (brands.length && colors.length) {
+            return brands.includes(sneaker.brand) && colors.includes(sneaker.color);
+        } else if (sizes.length) {
+            return sneaker.sizes.some(size => sizes.includes(size));
+        } else if (brands.length) {
+            return brands.includes(sneaker.brand);
+        } else if (colors.length) {
+            return colors.includes(sneaker.color);
+        } else {
+            return sneaker;
+        }
+    });
+
     return (
         <div className="sneakers-container">
-            {data.map((sneaker) => (
+            {filteredData.length ? filteredData.map((sneaker) => (
                 <div className="sneaker" key={sneaker.id }onClick={() => handleClick(sneaker)}>
                     <img src={require(`../../${sneaker.image}`)} alt={sneaker.shoe} />
                     <div className="details">
@@ -29,7 +50,7 @@ export const Sneakers = ({ sizes, brands }: Props): JSX.Element => {
                         <p>${sneaker.price.toFixed(2)}</p>
                     </div>
                 </div>
-            ))}
+            )) : <p>No items match your search!</p>}
         </div>
     )
 }
