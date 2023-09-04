@@ -9,12 +9,13 @@ export const App = (): JSX.Element => {
   const [brands, setBrands] = useState<string[]>([]);
   const [colors, setColors] = useState<string[]>([]);
 
+
   return (
     <div className="container">
         <FilterSelection sizes={sizes} setSizes={setSizes} setBrands={setBrands} brands={brands} setColors={setColors} colors={colors} />
         <Sneakers sizes={sizes} brands={brands} colors={colors} />
         <Cart />
-      </div>
+    </div>
   );
 }
 
