@@ -1,9 +1,13 @@
 # SneakerLand
 A front end for a sneaker store I built with TypeScript, React with Redux Toolkit, SASS. I couldn't find a good free sneakers API so I am fetching the data from a local data file that I put together to mimic a database.
 
-### clone repo
+### `clone repo`
+
+then
 
 ### `npm install`
+
+then
 
 ### `npm start`
 
