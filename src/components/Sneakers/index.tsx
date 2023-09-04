@@ -1,9 +1,8 @@
-import React from 'react';
+import { useState }from 'react';
 import './styles.scss';
 import { data } from '../../data';
-import { useDispatch } from 'react-redux';
-import { addToCart } from '../../redux/cartSlice';
 import { Sneaker } from '../../types';
+import { Modal } from '../Modal';
 
 type Props = {
     sizes: string[];
@@ -12,10 +11,12 @@ type Props = {
 }
 
 export const Sneakers = ({ sizes, brands, colors }: Props): JSX.Element => {
-    const dispatch = useDispatch();
+    const [isOpen, setIsOpen] = useState<boolean>(false);
+    const [sneaker, setSneaker] = useState<Sneaker>();
 
     const handleClick = (sneaker: Sneaker) => {
-        dispatch(addToCart(sneaker));
+        setIsOpen(true);
+        setSneaker(sneaker);
 
         // add to localStorage
     };
@@ -40,17 +41,31 @@ export const Sneakers = ({ sizes, brands, colors }: Props): JSX.Element => {
         }
     });
 
-    return (
-        <div className="sneakers-container">
-            {filteredData.length ? filteredData.map((sneaker) => (
-                <div className="sneaker" key={sneaker.id }onClick={() => handleClick(sneaker)}>
-                    <img src={require(`../../${sneaker.image}`)} alt={sneaker.shoe} />
-                    <div className="details">
-                        <p>{sneaker.shoe}</p>
-                        <p>${sneaker.price.toFixed(2)}</p>
+    const displayContent = () => {
+        if (!isOpen && filteredData.length) {
+            return (
+                <div className="sneakers-container">
+                    {filteredData.map((sneaker) => (
+                        <div className="sneaker" key={sneaker.id } onClick={() => handleClick(sneaker)}>
+                        <img src={require(`../../${sneaker.image}`)} alt={sneaker.shoe} />
+                        <div className="details">
+                            <p>{sneaker.shoe}</p>
+                            <p>${sneaker.price.toFixed(2)}</p>
+                        </div>
                     </div>
+                    ))}
                 </div>
-            )) : <p>No items match your search!</p>}
-        </div>
+            )
+        } else if (!isOpen) {
+            return <>No results found.</>
+        } else {
+            return <Modal isOpen={isOpen} setIsOpen={setIsOpen} sneaker={sneaker} />
+        }
+    }
+
+    return (
+        <>
+            {displayContent()}
+        </>
     )
 }

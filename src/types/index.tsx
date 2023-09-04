@@ -1,11 +1,3 @@
-export type Sneaker = {
-    shoe: string;
-    id: number;
-    sizes: string[];
-    price: number;
-    image: string;
-}
-
 export type CartItemState = {
     shoe: string;
     price: number;
@@ -13,3 +5,5 @@ export type CartItemState = {
     sizes: string[];
     image: string;
 };
+
+export type Sneaker = CartItemState & { color: string, desc: string, brand: string };

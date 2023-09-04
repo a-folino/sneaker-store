@@ -1,0 +1,74 @@
+.modal-container {
+    background-color: white;
+    border: 1px solid black;
+    height: max-content;
+    margin-top: 80px;
+    animation: .3s ease-in-out 0s 1 fadeIn;
+
+    .details {
+        padding: 20px;
+
+        .smaller-text {
+            font-size: .9rem;
+        }
+
+        h4 {
+            margin-top: 20px;
+        }
+    }
+
+    .buttons {
+        display: flex;
+        width: 100%;
+        
+        .add-btn, .close-btn {
+            flex: 1;
+            outline: 1px solid black;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+
+            &:hover {
+                transition: all .1s ease-in;
+                background-color: black;
+            }
+        }
+
+        .add-btn {
+            background: rgb(190, 11, 11);
+
+            color: white;
+
+            &:hover {
+                background-color: black;
+            }
+        }
+    
+        .close-btn {
+            background-color: white;
+
+            &:hover {
+                color: white;
+            }
+        }
+    }
+    
+}
+
+@keyframes fadeIn {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        transform: translateY(0%);
+    }
+    to {
+        transform: translateY(-1000px);
+    }
+}
