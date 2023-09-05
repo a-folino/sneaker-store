@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/sneaker-store/static/css/main.43358d22.css",
+    "main.js": "/sneaker-store/static/js/main.8810b328.js",
+    "static/media/244208729004.webp": "/sneaker-store/static/media/244208729004.0ce856dc29c002888c9f.webp",
+    "static/media/244208725804.webp": "/sneaker-store/static/media/244208725804.fe58954d3ec3d7be0b31.webp",
+    "static/media/244104376504.webp": "/sneaker-store/static/media/244104376504.68601832f8bb11096bc0.webp",
+    "static/media/244103719704.webp": "/sneaker-store/static/media/244103719704.d3470bb50f2ed5291b17.webp",
+    "static/media/244103553004.webp": "/sneaker-store/static/media/244103553004.0bd7aa3d27e25131dc0f.webp",
+    "static/media/244208620104.webp": "/sneaker-store/static/media/244208620104.8ee6796a898406d6ac5c.webp",
+    "static/media/314105498704.webp": "/sneaker-store/static/media/314105498704.18324c3b3b7333a48d03.webp",
+    "static/media/244208533604.webp": "/sneaker-store/static/media/244208533604.8ad4ce2127fa0f8e31aa.webp",
+    "static/media/244208608604.webp": "/sneaker-store/static/media/244208608604.10d92dce7af7fe701368.webp",
+    "static/media/244103069704.webp": "/sneaker-store/static/media/244103069704.0c222af0386017ca78e4.webp",
+    "static/media/244310471404.webp": "/sneaker-store/static/media/244310471404.23dccfa41ea9cc05a9e8.webp",
+    "static/media/244208667204.webp": "/sneaker-store/static/media/244208667204.67721329aa697a4293a4.webp",
+    "static/media/244208953604.webp": "/sneaker-store/static/media/244208953604.24386967cf27f90569ec.webp",
+    "static/media/244104299904.webp": "/sneaker-store/static/media/244104299904.64472082cda7901b92bd.webp",
+    "static/media/244208514604.webp": "/sneaker-store/static/media/244208514604.02cd81f1e64f598828b5.webp",
+    "static/media/244310454004.webp": "/sneaker-store/static/media/244310454004.0e54face9b9a4bb631a2.webp",
+    "index.html": "/sneaker-store/index.html",
+    "main.43358d22.css.map": "/sneaker-store/static/css/main.43358d22.css.map",
+    "main.8810b328.js.map": "/sneaker-store/static/js/main.8810b328.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.43358d22.css",
+    "static/js/main.8810b328.js"
+  ]
+}
